@@ -42,7 +42,13 @@ var pokerGame = {
    placeBet: function() {
       this.currentBank -= this.currentBet;
       return this.currentBank;
-   }
+   },
+
+payout: function (odds) {
+this.currentBank += this.currentBet * odds;
+return this.currentBank;
+},
+
 };
 
 //constructor function for poker cards
